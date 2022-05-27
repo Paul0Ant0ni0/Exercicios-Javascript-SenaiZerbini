@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A média de 3 notas</title>
+    <style>
+    body {
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+
+    #container {
+        margin-top: 16%;
+        width: 45%;
+        height: 50%;
+        background-color: rgba(255, 10, 214, 0.507);
+        box-shadow: 10px 20px 120px white;
+        border: 10px solid rgb(206, 47, 255);
+        border-radius: 20px;
+        display: inline-block;
+    
+    }
+
+    img {
+        width: 10%;
+        height: 10%;
+        
+    }
+
+    button {
+        margin: 8px;
+        border: 1px solid rgb(206, 47, 255);
+        border-radius: 15px;
+    }
+
+    button:hover {
+        background-color: bisque;
+        border: 1px solid rgb(206, 47, 255);
+        border-radius: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div id=container>
+        <h1>A média de 3 notas</h1>
+        <img src="med.png"><br>
+        <div id="resp"><p>Valor exibido aqui</p></div>
+        <button onclick="multi()" >Clique para calcular</button>
+    </div>
+    
+  
+
+
+    <script>
+       function multi() {
+            let n1 = Number(window.prompt('Digite a nota 1? '))
+            let n2 = Number(window.prompt('Digite a nota 2? '))
+            let n3 = Number(window.prompt('Digite a nota 3? '))
+            let res = window.document.querySelector('div#resp')
+            
+            res.innerHTML = `<p>A médias das 3 notas é de ${(n1+n2+n3)/(3)} !</p>`
+
+        
+        }
+    </script>
+</body>
+</html>

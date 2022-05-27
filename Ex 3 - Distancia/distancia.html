@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Milhas para Quilômetros</title>
+    <style>
+    body {
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+
+    #container {
+        margin-top: 16%;
+        width: 45%;
+        height: 50%;
+        background-color: rgba(255, 10, 214, 0.507);
+        box-shadow: 10px 20px 120px white;
+        border: 10px solid rgb(206, 47, 255);
+        border-radius: 20px;
+        display: inline-block;
+    
+    }
+
+    img {
+        width: 10%;
+        height: 10%;
+        
+    }
+
+    button {
+        margin: 8px;
+        border: 1px solid rgb(206, 47, 255);
+        border-radius: 15px;
+    }
+
+    button:hover {
+        background-color: bisque;
+        border: 1px solid rgb(206, 47, 255);
+        border-radius: 15px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div id=container>
+        <h1>Conversão de Milhas para Quilômetros</h1>
+        <img src="dist.png"><br>
+        <div id="resp"><p>Valor exibido aqui</p></div>
+        <button onclick="multi()" >Clique para fazer o cambio</button>
+    </div>
+    
+  
+    <script>
+       function multi() {
+            let n1 = Number(window.prompt('Digite o valor? '))
+            let res = window.document.querySelector('div#resp')
+            
+            res.innerHTML = `<p>A conversão de ${n1} milha(s), é de ${n1*0.6214} quilômetro(s)!</p>`
+
+        
+        }
+    </script>
+</body>
+</html>
